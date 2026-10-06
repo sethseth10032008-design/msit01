@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, "Noto Sans Khmer", sans-serif;
+  background: #ffffff;
+}
+.page {
+  min-height: 100vh;
+  background: #fff;
+  padding: 4px 0 7px;
+}
+
+.container {
+  width: calc(100% - 10px);
+  max-width: 850px;
+  min-height: 650px;
+  margin: 0 auto;
+  padding: 24px 56px 35px;
+  background: #f8f5ed;
+}
+
+/* =========================
+   Header
+========================= */
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  color: #d45a59;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+.khmer-title {
+  display: inline-block;
+  position: relative;
+  color: #222;
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 8px;
+  margin-bottom: 13px;
+}
+
+.khmer-title::before {
+  content: "";
+  position: absolute;
+  width: 128px;
+  height: 2px;
+  background: #222;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header p {
+  color: #555;
+  font-size: 12px;
+  margin-bottom: 55px;
+}
+
+/* =========================
+   Products
+========================= */
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 65px;
+  row-gap: 35px;
+}
+
+.product {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  min-width: 0;
+}
+
+.product img {
+  width: 92px;
+  height: 92px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.product-info {
+  padding-top: 3px;
+}
+
+.product-info h2 {
+  color: #333;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.product-info p {
+  color: #777;
+  font-size: 11px;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.product-info span {
+  color: #666;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* =========================
+   Bottom
+========================= */
+
+.bottom {
+  text-align: center;
+  margin-top: 42px;
+}
+
+.bottom p {
+  color: #555;
+  font-size: 13px;
+  margin-bottom: 17px;
+}
+
+.bottom button {
+  border: none;
+  background: #f3cd45;
+  color: #333;
+  padding: 10px 25px;
+  min-width: 65px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.bottom button:hover {
+  background: #eabd2d;
+}
+
+/* =========================
+   Footer Line
+========================= */
+
+footer {
+  width: calc(100% - 10px);
+  max-width: 850px;
+  height: 10px;
+  margin: 0 auto;
+  background: #d45a59;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 700px) {
+  .container {
+    padding: 25px 25px 35px;
+  }
+
+  .header h1 {
+    font-size: 27px;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .product {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 22px 15px 30px;
+  }
+
+  .header h1 {
+    font-size: 23px;
+    letter-spacing: 1px;
+  }
+
+  .product img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .product-info h2 {
+    font-size: 12px;
+  }
+
+  .product-info p {
+    font-size: 10px;
+  }
+}
+.soldout {
+  filter: grayscale(100%);
+}
